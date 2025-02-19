@@ -29,6 +29,11 @@ jobs:
       - name: Chmod Gradle
         run: chmod 744 gradlew
 
+          # 🔥 GitHub Secret에서 application-dev.yaml 복원
+      - name: Restore application-dev.yaml
+        run: |
+          echo "${{ secrets.APPLICATION_SECRET_YAML }}" | base64 --decode > src/main/resources/application-dev.yaml
+
       - name: Build with Gradle
         run: ./gradlew bootJar
 
