@@ -4,8 +4,6 @@ FROM eclipse-temurin:17-jdk
 # 2. 작업 디렉토리 설정
 WORKDIR /app
 
-COPY keystore.p12 /app/keystore.p12
-
 # 3. Gradle 빌드된 JAR 파일을 복사 (파일명이 다르면 수정 필요)
 COPY build/libs/*.jar app.jar
 
