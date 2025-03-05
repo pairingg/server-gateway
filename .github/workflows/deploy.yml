@@ -62,6 +62,6 @@ jobs:
             docker rm ${{secrets.DOCKER_REPO}} || true
             docker run -d --name ${{ secrets.DOCKER_REPO }} \
                 --restart always \
-                -p 8080:8080 \
+                -p 443:8080 \
                 ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}:latest
             

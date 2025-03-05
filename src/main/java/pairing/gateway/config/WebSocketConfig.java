@@ -1,16 +1,16 @@
-package pairing.gateway.config;
-
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.socket.config.annotation.EnableWebSocket;
-import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
-import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
-
-@Configuration
-@EnableWebSocket
-public class WebSocketConfig implements WebSocketConfigurer {
-    @Override
-    public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(new ChatWebSocketHandler(), "/chat")
-                .setAllowedOrigins("*");  // 실제 운영에서는 특정 도메인만 허용
-    }
-}
+//package pairing.gateway.config;
+//
+//import org.springframework.context.annotation.Configuration;
+//import org.springframework.web.socket.config.annotation.EnableWebSocket;
+//import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
+//import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
+//
+//@Configuration
+//@EnableWebSocket
+//public class WebSocketConfig implements WebSocketConfigurer {
+//    @Override
+//    public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
+//        registry.addHandler(new ChatWebSocketHandler(), "/chat")
+//                .setAllowedOrigins("*");  // 실제 운영에서는 특정 도메인만 허용
+//    }
+//}
